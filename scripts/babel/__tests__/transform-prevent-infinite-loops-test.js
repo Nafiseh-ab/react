@@ -14,7 +14,7 @@ describe('transform-prevent-infinite-loops', () => {
   it('fails the test for `while` loops', () => {
     expect(global.infiniteLoopError).toBe(null);
     expect(() => {
-      while (true) {
+      while (false) {
         // do nothing
       }
     }).toThrow(RangeError);
